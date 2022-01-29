@@ -73,7 +73,115 @@
     <title>飯ログ</title>
   </head>
   <body>
+
   <div id="map-container">
+      <div id="locations-panel">
+        <div id="locations-panel-list">
+          <header>
+            <h1 class="search-title">
+              <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
+              Find a location near you
+            </h1>
+
+            <form action='next2.php' method="post">
+              <div class="search-input">
+                <input name ='address' id="location-search-input" placeholder="Enter your address or zip code">
+                <div id="search-overlay-search" class="search-input-overlay search">
+                  <button id="location-search-button">
+                    <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="Search"/>
+                  </button>
+                </div>
+              </div>
+            </form>         
+          </header>
+          <!-- end/header -->
+
+          <div class="section-name" id="location-results-section-name">
+            All locations
+          </div>
+
+          <div id="nowplace">
+            <button id="nowbtn" type="button" onclick="getMyPlace()">現在位置を取得</button>
+          </div>
+
+          <!-- 追加 -->
+          <div class='test'>
+            <div class="results">
+              <ul id="location-results-list"></ul>
+            </div>
+            <div class='search-box'>
+              <form action='next2.php' method="post">
+                <div class="form-item">
+                  <label for="inputEmail4" class="form-label">店名</label>
+                  <input name='name' type="text" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-item">
+                  <p>評価</p>
+                  <select name='hyouka' class="form-select" aria-label="Default select example">
+                    <option selected>選択</option>
+                    <option value="⭐️">⭐️</option>
+                    <option value="⭐️⭐️">⭐️⭐️</option>
+                    <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <label for="inputPassword4" class="form-label">評価</label>
+                  <input name='hyouka' type="text" class="form-control" id="inputPassword4">
+                </div>
+                <div class="form-item">
+                  <label for="inputAddress" class="form-label">口コミ</label>
+                  <input name='kutikomi' type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-item">
+                  <button type="submit">投稿</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- どこがゴールかわからないが暫定 -->
+        <div class='under-box'>
+      <h1>オススメのお店教えて！</h1>
+      <form action='next2.php' method="post" class="row g-3">
+        <div class="form-item">
+          <label for="inputEmail4" class="form-label">店名
+          </label>
+          <input name='name' type="text" class="form-control" id="inputEmail4">
+        </div>
+        <p>評価</p>
+        <select name='hyouka' class="form-select" aria-label="Default select example">
+          <option selected>選択</option>
+          <option value="⭐️">⭐️</option>
+          <option value="⭐️⭐️">⭐️⭐️</option>
+          <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+        </select>
+        <!-- <div class="form-item">
+          <label for="inputPassword4" class="form-label">評価</label>
+          <input name='hyouka' type="text" class="form-control" id="inputPassword4">
+        </div> -->
+        <div class="form-item">
+          <label for="inputAddress" class="form-label">口コミ</label>
+          <input name='kutikomi' type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-item">
+          <button type="submit" class="btn btn-primary">投稿</button>
+        </div>
+      </form>
+  </div>
+        <!--  -->
+      </div>
+      <!-- end/ locations-panel -->
+      
+      <div id="map"></div>
+      <div id="result"></div>
+  
+
+
+    <!-- end/ #map-container -->
+    <!-- <div id="map-container">
+  
       <div id="locations-panel">
         <div id="locations-panel-list">
           <header>
@@ -146,10 +254,10 @@
         <option value="⭐️⭐️">⭐️⭐️</option>
         <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
       </select>
-      <!-- <div class="col-md-6">
+      <div class="col-md-6">
         <label for="inputPassword4" class="form-label">評価</label>
         <input name='hyouka' type="text" class="form-control" id="inputPassword4">
-      </div> -->
+      </div>
       <div class="col-12">
         <label for="inputAddress" class="form-label">口コミ</label>
         <input name='kutikomi' type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
@@ -157,7 +265,7 @@
       <div class="col-12">
         <button type="submit" class="btn btn-primary">投稿</button>
       </div>
-    </form>
+    </form> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_1O2SufjuLw4-T9l44hRxH6Y9i33jd2U&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
   </body>
 </html>
