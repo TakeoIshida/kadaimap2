@@ -81,8 +81,7 @@
               <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
               Find a location near you
             </h1>
-            
-            
+
           <form action='next2.php' method="post">
             <div class="search-input">
               <input name ='address' id="location-search-input" placeholder="Enter your address or zip code">
@@ -111,11 +110,9 @@
                   <label for="inputAddress" class="form-label">口コミ</label>
                   <input name='kutikomi' type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                 </div>
-                
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">投稿</button>
                 </div>
-                
               </div>
             </div>
           </form>
@@ -131,10 +128,9 @@
       <div id="map"></div>
       <div id="nowplace">
       <button id="nowbtn" type="button" onclick="getMyPlace()">現在位置を取得</button>
-      </div>      
-              <div id="result"></div>
       </div>
-    
+       <div id="result"></div>
+      </div>
     <h1>オススメのお店教えて！</h1>
     <form action='next2.php' method="post" class="row g-3">
       <div class="col-md-6">
@@ -158,9 +154,6 @@
         <label for="inputAddress" class="form-label">口コミ</label>
         <input name='kutikomi' type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
       </div>
-      
-      
-      
       <div class="col-12">
         <button type="submit" class="btn btn-primary">投稿</button>
       </div>
