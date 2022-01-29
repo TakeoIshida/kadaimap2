@@ -18,7 +18,7 @@
           {"title":"サツドラ 北８条店","address1":"日本、〒060-0908 北海道札幌市東区北８条東４丁目１−２０","coords":{"lat":43.07219864186095,"lng":141.3603368932541},"placeId":"ChIJr2s2UG0pC18REDM-izDhD84"}
         ],
         "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17},
-        "mapsApiKey": "AIzaSyB_1O2SufjuLw4-T9l44hRxH6Y9i33jd2U"
+        "mapsApiKey": "APIキー"
       };
 
       function initMap() {
@@ -158,6 +158,6 @@
         <button type="submit" class="btn btn-primary">投稿</button>
       </div>
     </form>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_1O2SufjuLw4-T9l44hRxH6Y9i33jd2U&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="APIキー"&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
   </body>
 </html>
